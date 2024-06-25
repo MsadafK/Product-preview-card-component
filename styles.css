@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-container {
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  /* flex-direction: row; */
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures no overflow issues with rounded corners */
+}
+
+.left-image-card-container,
+.right-content-card-container {
+  width: 50%;
+}
+
+.left-image-card-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-content-card-container {
+  padding: 2em;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+}
+
+#perfume {
+  color: hsl(228, 12%, 48%);
+  /* margin-bottom: 1.25em; */
+  font-size: 0.875rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.125rem;
+}
+
+.right-content-card-container h1 {
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  /* margin: 1em 0; */
+}
+
+.right-content-card-container p {
+  font-size: 0.875rem;
+  margin: 2em 0;
+  color: hsl(228, 12%, 48%);
+  line-height: 1.5;
+}
+
+.right-content-card-container .price {
+  font-family: "Fraunces", serif;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(158, 36%, 37%);
+  /* margin: 0.5em 0; */
+}
+
+.right-content-card-container .old-price {
+  font-size: 0.875rem;
+  text-decoration: line-through;
+  color: hsl(0, 0%, 50%);
+  /* margin-bottom: 1.25em; */
+}
+
+.right-content-card-container .add-to-cart-btn {
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border: none;
+  border-radius: 0.3125em;
+  padding: 1em;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.right-content-card-container .add-to-cart-btn:hover {
+  background-color: hsl(157, 38%, 29%);
+}
+
+.price-container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+#perfume {
+  margin-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 375px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .left-image-card-container,
+  .right-content-card-container {
+    width: 100%;
+  }
+
+  .left-image-card-container img {
+    border-radius: 1rem 1rem 0 0;
+    height: 250px;
+  }
+
+  .right-content-card-container {
+    padding: 1.5em;
+  }
+
+  .right-content-card-container h1 {
+    font-size: 1.25rem;
+  }
+
+  .right-content-card-container p {
+    font-size: 0.75rem;
+  }
+
+  .right-content-card-container .price {
+    font-size: 1.25rem;
+  }
+
+  .right-content-card-container .old-price {
+    font-size: 0.75rem;
+  }
+
+  .right-content-card-container .add-to-cart-btn {
+    padding: 0.75em;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-content-card-container h1 {
+    font-size: 1.125rem;
+  }
+
+  .right-content-card-container p {
+    font-size: 0.6875rem;
+  }
+
+  .right-content-card-container .price {
+    font-size: 1.125rem;
+  }
+
+  .right-content-card-container .old-price {
+    font-size: 0.6875rem;
+  }
+
+  .right-content-card-container .add-to-cart-btn {
+    padding: 0.5em;
+    font-size: 0.6875rem;
+  }
+}
